@@ -1,6 +1,6 @@
 # JSHint Mixin For Chocolat
 
-Adds basic support for JSHinting your javascript files. It's currently under development – all bug reports are welcome. Chocoalt currently has JSHinting support built in in the form of inline validation. This mixin offers a way to get a list of all errors for the current document.
+Adds basic support for JSHinting your javascript files. It's currently under development – all bug reports are welcome. Chocolat currently has JSHinting support built in in the form of inline validation. This mixin offers a way to get a list of all errors for the current document.
 
 ## Requirements
 
