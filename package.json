@@ -1,0 +1,15 @@
+{
+  "author": "Derek Reynolds <derekr@me.com> (whatupderek.com)",
+  "name": "jshint.chocmixin",
+  "description": "A mixin for the Chocolat text editor that provides jshint features.",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "dependencies": { 'jshint': '0.8.0' },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+        background-color: #fefefe;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .errors {
+        list-style: none;
+        color: #999;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .errors li {
+        padding: .2em 1em;
+        border-bottom: 1px dotted #ddd;
+        clear: both;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .errors li:hover {
+        color: #333;
+        background: #fcfcfc;
+      }
+      
+      .line-num {
+        display: block;
+        width: 6em;
+        position: absolute;
+        font-family: Consolas, Menlo, Monaco, "Lucida Console", monospace;
+      }
+      
+      .reason {
+        margin-left: 6em;
+        float: left;
+      }
+    </style>
+</head>
+<body>
+    <ul id="errors" class="errors">
+    </ul>
+    
+    <script type="text/javascript">
+      function hinted(data) {
+        var errLi, 
+            errFragment = document.createDocumentFragment(),
+            errList = document.getElementById('errors');
+        
+        // Send a message to chocolat whenever the line number link is clicked.
+        errList.addEventListener('click', function (e) {
+          if (e.target && e.target.nodeName == 'A') {
+            chocolat.sendMessage('goToLine', [e.target.dataset.line]);
+          }
+        });
+        
+        data.errors.forEach(function (err) {          
+          errLi = document.createElement('li');
+          errLi.innerHTML = '<a href="#" class="line-num" title="' + err.evidence + '" data-line="' + err.line + '">line ' + err.line + '</a> <span class="reason">' + err.reason + '</span>';
+          errFragment.appendChild(errLi);
+        });
+        
+        errList.innerHTML = '';
+        errList.appendChild(errFragment);
+      }
+    </script>
+</body>
+</html>
