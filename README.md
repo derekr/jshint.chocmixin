@@ -12,7 +12,7 @@ Github account
 This mixin will be installable with Chocolat's Extras Manager when the new version is released. Until then, do something like:
 
     mkdir -p ~/Library/Application\ Support/Chocolat/Mixins/
-    git clone https://github.com/derekr/jsthin.chocmixin.git ~/Library/Application\ Support/Chocolat/Mixins/jshint.chocmixin
+    git clone https://github.com/derekr/jshint.chocmixin.git ~/Library/Application\ Support/Chocolat/Mixins/jshint.chocmixin
     
 ## Contributors
 
