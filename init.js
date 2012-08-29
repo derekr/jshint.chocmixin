@@ -6,7 +6,7 @@ function buildTitle(documentName, errorCount) {
 
 var window;
 
-Hooks.addMenuItem("Actions/JSHint/Hint document", "cmd-ctrl-h", function () {
+Hooks.addMenuItem("Actions/JavaScript/JSHint document", "cmd-ctrl-h", function () {
     
     var doc = Document.current(),
         result = jshint.JSHINT(doc.text);
