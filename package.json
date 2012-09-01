@@ -6,7 +6,7 @@
   "repository": {
     "url": ""
   },
-  "dependencies": { 'jshint': '0.8.0' },
+  "dependencies": { "jshint": "0.8.0" },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
