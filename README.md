@@ -5,7 +5,6 @@ Adds basic support for JSHinting your javascript files. It's currently under dev
 ## Requirements
 
 * Chocolat 1.2-node8 or greater
-* Github account
 
 ## Installation
 
