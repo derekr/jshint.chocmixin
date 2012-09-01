@@ -41,5 +41,7 @@ Hooks.addMenuItem("Actions/JavaScript/JSHint document", "cmd-ctrl-h", function (
       window.run();
       window.applyFunction('hinted', [data]);
       
+    } else {
+      Alert.show("No errors", "Awesome work!", ["OK"]);
     }
 });
