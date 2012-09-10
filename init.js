@@ -1,4 +1,6 @@
-var jshint = require('jshint');
+var jshint = require('jshint'),
+    path = require('path'),
+    getConfig = require('./getConfig.js');
 
 function buildTitle(documentName, errorCount) {
   return errorCount + ' errors in ' + documentName;
