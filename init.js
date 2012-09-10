@@ -9,7 +9,11 @@ var window;
 Hooks.addMenuItem("Actions/JavaScript/JSHint document", "cmd-ctrl-h", function () {
     
     var doc = Document.current(),
-        result = jshint.JSHINT(doc.text);
+        docPath = doc.path(),
+        configDir = docPath ? path.dirname(docPath) : process.env.HOME;
+        
+    var config = getConfig(configDir),
+        result = jshint.JSHINT(doc.text, config);
     
     // Only show the window if we have errors.
     if (!result) {
